@@ -1,17 +1,9 @@
 import streamlit as st 
 import nltk
 
-nltk.download('stopwords')
 import spacy
-from spacy.cli import download
+nltk.download('stopwords')
 
-# Try loading the model, otherwise download it
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    print("Model 'en_core_web_sm' not found. Downloading now...")
-    download("en_core_web_sm")  # Automatically install the model
-    nlp = spacy.load("en_core_web_sm")
 spacy.load('en_core_web_sm')
 import pandas as pd
 import base64
