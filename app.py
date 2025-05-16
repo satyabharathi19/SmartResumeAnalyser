@@ -71,7 +71,7 @@ def course_recommender(course_list):
     return rec_course
   
 #connection = pymysql.connect(host=st.secrets.db_credintials.host,user=st.secrets.db_credintials.username, password=st.secrets.db_credintials.password,database=st.secrets.db_credintials.database)
-connection = pymysql.connect(host="192.168.55.104",user="MBharathi", password="Bharu@1234",database="resume")
+connection = pymysql.connect(host="localhost",user="MBharathi", password="Bharu@1234",database="resume")
 #connection = pymysql.connect(**st.secrets.db_credintials)
 
 cursor = connection.cursor()
