@@ -81,15 +81,9 @@ database = mysql_secrets["database"]
 username = mysql_secrets["username"]
 password = mysql_secrets["password"]
 
-# Establish the database connection
-connection = pymysql.connect(
-    host=host,
-    user=username,
-    password=password,
-    database=database
-)
-
+connection = pymysql.connect(host='localhost', user='root', password='')
 cursor = connection.cursor()
+
 
 # Function to insert data into the database
 def insert_data(name, email, res_score, timestamp, no_of_pages, reco_field, cand_level, skills, recommended_skills, courses):
