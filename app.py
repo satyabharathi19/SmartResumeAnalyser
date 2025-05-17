@@ -74,9 +74,21 @@ def course_recommender(course_list):
 #connection = pymysql.connect(host="localhost",user="MBharathi", password="Bharu@1234",database="resume")
 #connection = pymysql.connect(**st.secrets.db_credintials)
 
-connection = pymysql.connect(host='localhost', user='root', password='')
-cursor = connection.cursor()
+mysql_secrets = st.secrets["db_credentials"]
 
+host = mysql_secrets["host"]
+port = mysql_secrets["port"]
+database = mysql_secrets["database"]
+username = mysql_secrets["username"]
+password = mysql_secrets["password"]
+
+# Establish the database connection
+connection = pymysql.connect(
+    host=host,
+    user=username,
+    password=password,
+    database=database
+)
 
 # Function to insert data into the database
 def insert_data(name, email, res_score, timestamp, no_of_pages, reco_field, cand_level, skills, recommended_skills, courses):
