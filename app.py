@@ -89,6 +89,7 @@ connection = pymysql.connect(
     password=password,
     database=database
 )
+cursor = connection.cursor()
 
 # Function to insert data into the database
 def insert_data(name, email, res_score, timestamp, no_of_pages, reco_field, cand_level, skills, recommended_skills, courses):
