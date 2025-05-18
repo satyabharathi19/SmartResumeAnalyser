@@ -1,4 +1,5 @@
 nltk
+mysqlclient==2.0.30
 SQLAlchemy==2.0.30
 pdfminer3
 streamlit
